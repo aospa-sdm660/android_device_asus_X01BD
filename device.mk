@@ -10,6 +10,14 @@ $(call inherit-product, device/asus/sdm660-common/sdm660.mk)
 # Inherit proprietary files
 $(call inherit-product-if-exists, vendor/asus/X01BD/X01BD-vendor.mk)
 
+# Overlays
+PRODUCT_PACKAGES += \
+    NoCutoutOverlay \
+    X01BDFrameworksResTarget \
+    X01BDNoCutoutOverlay \
+    X01BDSystemUI \
+    X01BDWifiOverlay
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
